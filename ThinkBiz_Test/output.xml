@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210402 00:31:10.336" rpa="false">
+<suite id="s1" name="Test1" source="C:\Users\nilesh\PycharmProjects\TestProject01\ThinkBiz_Test\Test1.robot">
+<test id="s1-t1" name="TC1: User Redirected to Gmail Login Screen">
+<kw name="Open Browser with Login Screen">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210402 00:31:10.748" level="INFO">Opening browser 'Chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20210402 00:31:10.747" endtime="20210402 00:31:17.046"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210402 00:31:17.046" endtime="20210402 00:31:17.174"></status>
+</kw>
+<status status="PASS" starttime="20210402 00:31:10.747" endtime="20210402 00:31:17.174"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Facebook – log in or sign up</arg>
+</arguments>
+<msg timestamp="20210402 00:31:17.181" level="INFO">Page title is 'Facebook – log in or sign up'.</msg>
+<status status="PASS" starttime="20210402 00:31:17.175" endtime="20210402 00:31:17.181"></status>
+</kw>
+<status status="PASS" starttime="20210402 00:31:10.745" endtime="20210402 00:31:17.182" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TC2: Login with Valid Credential">
+<kw name="Input Username">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=email</arg>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20210402 00:31:17.184" level="INFO">Typing text '9079180743' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20210402 00:31:17.184" endtime="20210402 00:31:17.283"></status>
+</kw>
+<status status="PASS" starttime="20210402 00:31:17.183" endtime="20210402 00:31:17.283"></status>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=pass</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20210402 00:31:17.284" level="INFO">Typing text '02969222100' into text field 'id=pass'.</msg>
+<status status="PASS" starttime="20210402 00:31:17.284" endtime="20210402 00:31:17.395"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[normalize-space()='Log In']</arg>
+</arguments>
+<msg timestamp="20210402 00:31:17.395" level="INFO">Clicking element 'xpath=//button[normalize-space()='Log In']'.</msg>
+<status status="PASS" starttime="20210402 00:31:17.395" endtime="20210402 00:31:17.452"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>15</arg>
+</arguments>
+<msg timestamp="20210402 00:31:32.454" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20210402 00:31:17.452" endtime="20210402 00:31:32.454"></status>
+</kw>
+<status status="PASS" starttime="20210402 00:31:17.284" endtime="20210402 00:31:32.454"></status>
+</kw>
+<status status="PASS" starttime="20210402 00:31:17.183" endtime="20210402 00:31:32.455" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TC3: Click on Post &amp; add Comment">
+<kw name="Click on Post">
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ESC</arg>
+</arguments>
+<msg timestamp="20210402 00:31:32.460" level="INFO">Sending key(s) ('ESC',) to page.</msg>
+<msg timestamp="20210402 00:31:32.460" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg timestamp="20210402 00:31:32.460" level="INFO">Releasing special key ESCAPE.</msg>
+<status status="PASS" starttime="20210402 00:31:32.459" endtime="20210402 00:31:32.535"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[normalize-space()="What's on your mind, Nilesh?"]</arg>
+</arguments>
+<msg timestamp="20210402 00:31:32.536" level="INFO">Clicking element 'xpath=//span[normalize-space()="What's on your mind, Nilesh?"]'.</msg>
+<status status="PASS" starttime="20210402 00:31:32.535" endtime="20210402 00:31:32.713"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>05</arg>
+</arguments>
+<msg timestamp="20210402 00:31:37.713" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210402 00:31:32.713" endtime="20210402 00:31:37.713"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='d2edcug0 hpfvmrgz qv66sw1b c1et5uql lr9zc1uh a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v lrazzd5p oo9gr5id'][normalize-space()='Add to Your Post']</arg>
+</arguments>
+<msg timestamp="20210402 00:31:37.714" level="INFO">Clicking element 'xpath=//span[@class='d2edcug0 hpfvmrgz qv66sw1b c1et5uql lr9zc1uh a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v lrazzd5p oo9gr5id'][normalize-space()='Add to Your Post']'.</msg>
+<status status="PASS" starttime="20210402 00:31:37.713" endtime="20210402 00:31:37.810"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>05</arg>
+</arguments>
+<msg timestamp="20210402 00:31:42.813" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210402 00:31:37.810" endtime="20210402 00:31:42.813"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='d2edcug0 hpfvmrgz qv66sw1b c1et5uql lr9zc1uh a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb mdeji52x a5q79mjw g1cxx5fr lrazzd5p oo9gr5id hzawbc8m'][normalize-space()='Photo/Video']</arg>
+</arguments>
+<msg timestamp="20210402 00:31:42.813" level="INFO">Clicking element 'xpath=//span[@class='d2edcug0 hpfvmrgz qv66sw1b c1et5uql lr9zc1uh a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb mdeji52x a5q79mjw g1cxx5fr lrazzd5p oo9gr5id hzawbc8m'][normalize-space()='Photo/Video']'.</msg>
+<status status="PASS" starttime="20210402 00:31:42.813" endtime="20210402 00:31:42.895"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>05</arg>
+</arguments>
+<msg timestamp="20210402 00:31:47.909" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210402 00:31:42.896" endtime="20210402 00:31:47.909"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>my_upload_field</arg>
+<arg>${AddFile}</arg>
+</arguments>
+<msg timestamp="20210402 00:31:47.909" level="INFO">Sending C:\Users\nilesh\Pictures.jpg to browser.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210402 00:31:48.335" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210402 00:31:47.924" endtime="20210402 00:31:48.335"></status>
+</kw>
+<msg timestamp="20210402 00:31:48.339" level="FAIL">Element with locator 'my_upload_field' not found.</msg>
+<status status="FAIL" starttime="20210402 00:31:47.909" endtime="20210402 00:31:48.339"></status>
+</kw>
+<status status="FAIL" starttime="20210402 00:31:32.458" endtime="20210402 00:31:48.340"></status>
+</kw>
+<status status="FAIL" starttime="20210402 00:31:32.457" endtime="20210402 00:31:48.340" critical="yes">Element with locator 'my_upload_field' not found.</status>
+</test>
+<test id="s1-t4" name="Close Browser">
+<status status="FAIL" starttime="20210402 00:31:48.341" endtime="20210402 00:31:48.342" critical="yes">Test case contains no keywords.</status>
+</test>
+<status status="FAIL" starttime="20210402 00:31:10.339" endtime="20210402 00:31:48.343"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2">Critical Tests</stat>
+<stat pass="2" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="2" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
